@@ -146,8 +146,9 @@ v3.UnixConnection2 = function(_, v67, v68, v69, v70)
     end);
 end;
 v3.UnixConnection = function(_, v77, v78, v79, v80)
+local v82 = nil
+pcall(function()
     local v81 = if l_RunService_0:IsClient() then l_RunService_0.RenderStepped else l_RunService_0.Heartbeat;
-    local v82 = nil;
     local v83 = false;
     local v84 = os.clock();
     local v85 = false;
@@ -170,6 +171,7 @@ v3.UnixConnection = function(_, v77, v78, v79, v80)
             v85 = false;
         end;
     end);
+end)
     return v82;
 end;
 v3.UnixWithFrequency = function(_, v89, v90, v91, v92)
